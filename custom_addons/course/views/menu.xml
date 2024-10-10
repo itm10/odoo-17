@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_course_root"
+              name="HMS"
+              web_icon="course,static/description/icon_duplicate.png"
+    />
+
+    <menuitem id="menu_frontdesk"
+              name="Front Desk"
+              parent="menu_course_root"
+    />
+
+    <menuitem id="menu_billing"
+              name="Billing"
+              parent="menu_course_root"
+    />
+
+    <menuitem id="menu_lesson"
+              name="Lesson"
+              parent="menu_frontdesk"
+              action="action_course_lesson"
+    />
+
+    <menuitem id="menu_lesson_readonly"
+              name="View Lesson"
+              parent="menu_frontdesk"
+              action="action_course_lesson_readonly"
+    />
+
+    <menuitem id="menu_appointment"
+              name="Appointments"
+              parent="menu_frontdesk"
+              action="action_course_appointment"
+    />
+
+    <menuitem id="menu_configuration"
+              name="Configuration"
+              sequence="100"
+              parent="menu_course_root"
+    />
+
+    <menuitem id="menu_lesson_tag"
+              name="Tags"
+              parent="menu_configuration"
+              action="action_lesson_tag"
+    />
+
+    <menuitem id="menu_appointment_line"
+              name="Appointment line"
+              parent="menu_frontdesk"
+              action="action_appointment_line"
+    />
+
+    <menuitem id="menu_hms_invoicing"
+              name="Invoice"
+              parent="menu_billing"
+              action="account.action_move_out_invoice_type"
+    />
+
+    <menuitem id="menu_hms_payment"
+              name="Payment"
+              parent="menu_billing"
+              action="account.action_account_payments"
+    />
+
+</odoo>

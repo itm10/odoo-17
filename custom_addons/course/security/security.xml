@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+       <record id="module_category_course" model="ir.module.category">
+            <field name="name">Course</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="group_course_receptionists" model="res.groups">
+            <field name="name">Receptionists</field>
+            <field name="category_id" ref="course.module_category_course"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">This user will have access to appointments.</field>
+        </record>
+
+        <record id="group_course_teachers" model="res.groups">
+            <field name="name">Teachers</field>
+            <field name="category_id" ref="course.module_category_course"/>
+            <field name="implied_ids" eval="[(4, ref('course.group_course_receptionists'))]"/>
+            <field name="comment">This user will have access to create, read, and write, but not delete records.</field>
+        </record>
+
+    </data>
+</odoo>

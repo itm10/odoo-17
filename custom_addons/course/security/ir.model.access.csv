@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_course_lesson,access.course.lesson,course.model_course_lesson,course.group_course_receptionists,1,1,1,0
+access_course_appointment,access.course.appointment,course.model_course_appointment,course.group_course_receptionists,1,1,1,1
+access_lesson_appointment_line,access.lesson.appointment.line,course.model_lesson_appointment_line,course.group_course_receptionists,1,1,1,1
+access_lesson_tag,access.lesson.tag,course.model_lesson_tag,course.group_course_receptionists,1,1,1,0
+
+access_course_appointment_teachers,access.course.appointment.teachers,course.model_course_appointment,course.group_course_teachers,1,1,1,0
+
+
+
+
+
+
+
+
